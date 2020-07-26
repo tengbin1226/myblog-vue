@@ -47,7 +47,7 @@ public class AccountRealm extends AuthorizingRealm {
         String userId = jwtUtils.getClaimByToken((String) jwtToken.getPrincipal()).getSubject();
 
         // 根据获取到的用户编号查询用户
-        User user = userService.findById(Long.valueOf(userId));
+        User user = userService.getById(Long.valueOf(userId));
 
         if (ObjectUtils.isEmpty(user)) {
             throw new UnknownAccountException("账户不存在");

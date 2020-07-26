@@ -12,11 +12,4 @@ import com.tengbin.blog.modules.user.entity.User;
  */
 public interface UserService extends IService<User> {
 
-    /**
-     * 根据编号查询用户信息
-     *
-     * @param id
-     * @return
-     */
-    User findById(Long id);
 }
